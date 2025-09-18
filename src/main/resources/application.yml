@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: rabbitmq-publisher
+
+  rabbitmq:
+    addresses: localhost:30000,localhost:30002,localhost:30004
+    username: guest
+    password: guest
+    cache:
+      channel:
+        size: 10
+    listener:
+      simple:
+        concurrency: 10
+        max-concurrency: 20
+
+app:
+  queue-name: q.example
